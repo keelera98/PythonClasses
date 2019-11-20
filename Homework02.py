@@ -21,12 +21,43 @@ for i in pastClasses:
 
 print "You can take: "
 for j in pastClasses:
-	if prereq.has_key(j):
-		print prereq[j]
+	x = j[5:8]
+	if x == "161" and "CSCI 162" not in pastClasses:
+		print "CSCI 162"
+		if "CSCI 241" not in pastClasses:
+			print "CSCI 241"
+	elif x == "162" and "CSCI 231" not in pastClasses:
+		print "CSCI 231"
+		if "CSCI 303" not in pastClasses:
+			print "CSCI 303"
+		if "CSCI 304" not in pastClasses:
+			print "CSCI 304"
+		if "CSCI 307" not in pastClasses:
+			print "CSCI 307"
+	elif x == "150" and "CSCI 260" not in pastClasses:
+		print "CSCI 260"
+	elif x == "231" and "CSCI 353" not in pastClasses:
+		print "CSCI 353"
+		if "CSCI 355" not in pastClasses:
+			print "CSCI 355"
+	elif x == "241" and "CSCI 300" not in pastClasses:
+		print "CSCI 300"
+	elif x == "353" and "CSCI 385" not in pastClasses:
+		print "CSCI 385"
+	elif x == "470" and "CSCI 480" not in pastClasses:
+		print "CSCI 480" 
+
+
+if "CSCI 161" not in pastClasses:
+	print "CSCI 161"
+elif "CSCI 150" not in pastClasses:
+	print "CSCI 150"
+elif "CSCI 251" not in pastClasses:
+	print "CSCI 251"
 
 if 'CSCI 303' in pastClasses:
 	if 'CSCI 304' in pastClasses:
-		if 'CSCI 307' in pastClasses:
+		if 'CSCI 307' in pastClasses and "CSCI 475" not in pastClasses:
 			print "CSCI 475"
-			if 'CSCI 231' in pastClasses:
+			if 'CSCI 231' in pastClasses and "CSCI 461" not in pastClasses:
 				print "CSCI 461"
